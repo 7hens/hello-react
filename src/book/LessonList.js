@@ -27,7 +27,7 @@ class Lesson extends Component {
 export default class LessonsList extends Component {
     render() {
         return (
-            <div>
+            <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
                 {lessons.map((lesson, i) => <Lesson key={i} lesson={lesson} index={i}/>)}
             </div>
         )

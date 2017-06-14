@@ -8,7 +8,7 @@ export default class Notification extends Component {
     render() {
         const count = this.getNotificationCount()
         return (
-            <span>{ count > 0 ? `有(${count})条` : "没有" }未读消息</span>
+            <span style={{margin: 16}}>{ count > 0 ? `有(${count})条` : "没有" }未读消息</span>
         )
     }
 }

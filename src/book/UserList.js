@@ -24,7 +24,7 @@ class User extends Component {
 export default class UserList extends Component {
     render() {
         return (
-            <div>
+            <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
                 {users.map((user, i) => <User user={user} key={i}/>)}
             </div>
         )

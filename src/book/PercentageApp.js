@@ -20,9 +20,7 @@ class Input extends Component {
     render() {
         const { value } = this.state
         return (
-            <div>
-                <input type='number' value={value} onChange={this.onChange.bind(this)} />
-            </div>
+            <input type='number' value={value} onChange={this.onChange.bind(this)} style={styles.input}/>
         )
     }
 }
@@ -31,7 +29,7 @@ class PercentageShower extends Component {
     render() {
         const { value } = this.props
         return (
-            <div>{Math.round(value * 10000) / 100}%</div>
+            <span style={styles.shower}>{Math.round(value * 10000) / 100}%</span>
         )
     }
 }
@@ -51,10 +49,21 @@ export default class PercentageApp extends Component {
     render() {
         const { value } = this.state
         return (
-            <div>
+            <span>
                 <Input onChange={this.onChange.bind(this)} />
                 <PercentageShower value={value} />
-            </div>
+            </span>
         )
+    }
+}
+
+const styles = {
+    input: {
+        marginRight: 8,
+        marginLeft: 16,
+        width: 64
+    },
+    shower: {
+        marginRight: 16
     }
 }
