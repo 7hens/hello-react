@@ -1,0 +1,9 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import App from './App'
+import Header from './book/Header'
+import registerServiceWorker from './registerServiceWorker'
+import './index.css'
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+registerServiceWorker();
